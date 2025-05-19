@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Hanya sembunyikan overflow horizontal */
+            font-family: Fustat;
+        }
+        
+        .fullscreen-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        
+        .fullscreen-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }   
+
+        .content-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Judul {
+            color: #E43030;
+            margin-top: 40vh;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 40vh;
+            text-align: center;
+            color: white;
+        }
+        
+        .grup-marquee {
+            width: 200%;
+            background: #E43030;
+            padding: 5px 0;
+            position: relative; /* Tetap di aliran dokumen normal */
+        }
+        
+        marquee {
+            color: white;
+            font-size: 1.3rem;
+        }
+        .deskripsi {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .deskripsi h1 {
+            color: #E43030;
+            padding-top: 3%;
+            border-bottom: 2px solid #E43030 ;
+            width: 405px;
+        }
+
+        .list-container {
+            padding-left: 10%;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+        }
+        
+        .list-container h1 {
+            color: #e43030;
+            font-size: 23px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e43030;
+            display: inline-block;
+        }
+        
+        .list {
+            margin-bottom: 40px;
+            padding-right: 15%;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 7%;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            font-size: 15px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .highlight {
+            color: #e43030;
+            font-weight: 600;
+        }
+
+        .section {
+            margin: 40px 10% 40px 10%;
+            background: whitesmoke;
+            border-radius: 10px;
+            padding: 5% 6% 5% 6%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }  
+        .section img {
+            width: 100%;
+        }
+        .project-info {
+            padding: 15px;
+            text-align: center;
+            color: #E43030;
+        }              
+    </style>
+</head>
+<body>
+    <div class="fullscreen-container">
+        <img src="Photo/Photo 1.jpg" class="fullscreen-img" alt="Foto fullscreen">
+        <div class="content-wrapper">
+            <h1 class="Judul">ZEIN Alumunium By Sinaga</h1>
+            <h2 class="logo">Logo</h2>
+        </div>
+    </div>
+    
+    <div class="grup-marquee">
+        <marquee width="70%" direction="right">
+            Jasa Pemasangan Aluminium Berkualitas  Solusi Modern untuk Bangunan Anda
+        </marquee>
+    </div>
+
+    <div class="deskripsi">
+       <h1 >ZEIN Alumunium By Sinaga</h1> 
+       <p>Kami adalah penyedia jasa pemasangan aluminium yang berpengalaman dan profesional, siap membantu Anda mewujudkan tampilan bangunan yang modern, rapi, dan fungsional. Dengan memanfaatkan material aluminium yang ringan namun kuat, tahan karat, dan minim perawatan, kami menawarkan solusi konstruksi yang tidak hanya estetis, tetapi juga efisien dan tahan lama.</p>
+       <p>Kami melayani rumah, kantor, ruko, hingga bangunan komersial.</p>
+       <p><b>Fokus kami: </b>Hasil rapi & kepuasan pelanggan.</p>
+    </div>
+
+    <div class="list-container">
+        <div class="list">
+            <h1>Layanan Kami:</h1>
+            <ul>
+                <li><span class="highlight">Kusen aluminium</span> (pintu & jendela)</li>
+                <li>Partisi aluminium & kaca</li>
+                <li>Plafon aluminium</li>
+                <li>Pintu sliding/lipat aluminium</li>
+                <li>Kanopi & teralis aluminium</li>
+            </ul>
+        </div>
+        
+        <div class="list">
+            <h1>Kenapa pilih kami?</h1>
+            <ul>
+                <li>Teknisi berpengalaman & terlatih</li>
+                <li>Bahan berkualitas, tahan lama</li>
+                <li>Pengerjaan cepat, rapi, sesuai jadwal</li>
+                <li>Harga bersaing & bisa disesuaikan</li>
+                <li>Konsultasi & survei lokasi <span class="highlight">gratis</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="Photo/Photo 1.jpg" alt="">
+        <div class="project-info">
+              <p>
+                NAMA PRODUK
+              </p>
+            </div>
+    </div>
+    
+</body>
+</html>
