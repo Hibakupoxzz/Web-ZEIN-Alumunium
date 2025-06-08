@@ -48,6 +48,7 @@ color: white;
 width: 142%;
 background: #e43030;
 padding: 5px 0;
+margin-right: 15;
 position: relative; /* Tetap di aliran dokumen normal */
 }
 
@@ -278,6 +279,7 @@ font-weight: 900%;
 @media (max-width: 768px) {
 body {
 font-size: 14px;
+overflow-x: hidden;
 }
 
 .fullscreen-container {
