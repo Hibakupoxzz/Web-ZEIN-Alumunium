@@ -55,6 +55,10 @@ marquee {
 color: white;
 font-size: 1.3rem;
 }
+
+p {
+    font-size: 1.1rem;
+}
 .deskripsi {
 padding-left: 10%;
 padding-right: 10%;
@@ -95,6 +99,7 @@ padding-left: 7%;
 
 li {
 margin-bottom: 12px;
+font-size: 1.1rem;
 padding-left: 25px;
 position: relative;
 }
@@ -128,78 +133,6 @@ text-align: center;
 color: #e43030;
 }
 
-.slider {
-background: #eee;
-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-font-size: 14px;
-color: #000;
-margin: 0;
-padding: 0;
-}
-
-swiper-container {
-width: 100%;
-height: 100%;
-position: relative;
-    --swiper-pagination-bottom: 0px;}
-
-swiper-slide {
-text-align: center;
-font-size: 18px;
-background: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-}
-
-swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-.swiper-button-next {
-color: #e43030;
-}
-.swiper-description {
-margin-top: 20px;
-text-align: center;
-background-color: #e43030;
-color: white;
-padding: 10px 20px;
-border-radius: 10px;
-}
-
-.swiper-pagination {
-position: absolute;
-top: 0px !important;
-background: #000;
-/* margin-top: 0px !important; */
-}
-    /* Ubah warna ikon panah */
-.swiper-button-next,
-.swiper-button-prev {
-color: #e43030; /* ganti dengan warna yang kamu inginkan */
-}
-
-.swiper-group {
-flex-direction: column; 
-justify-content: center; 
-align-items: center; 
-border-radius: 2%; 
-padding-bottom: 30px;
-}
-.swiper-wrap {
-height: 50px; 
-background-color: #e43030; 
-color: whitesmoke; 
-padding-top: 15px;
-border-radius: 0px 0px 20px 20px;
-}
-.swiper-group .swiper-wrap p {
-margin-top: 0px !important;
-}
 
 .red-button {
 display: block;
@@ -267,15 +200,19 @@ margin-bottom: 1rem;
 }
 
 .icon-text {
-display: flex;
-align-items: center;
-margin-bottom: 1rem;
+  display: flex;
+  align-items: center; /* agar icon dan teks sejajar vertikal */
+  gap: 0.5rem; /* jarak antara icon dan teks */
+  margin-bottom: 1rem;
+  color: #000; /* warna teks hitam agar kontras */
+  padding-top: 5px;
 }
 
 .icon-text img {
-margin-right: 0.5rem;
-width: 24px;
-height: 24px;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0; /* supaya icon tidak mengecil */
 }
 
 .image-box {
@@ -295,7 +232,7 @@ border-radius: 2px;
 }
 
 .location-info .icon-text {
-justify-content: center;
+    padding: auto;
 }
 
 .copyright {
@@ -309,6 +246,31 @@ color: #333;
 .copyright p {
 text-align: center;
 font-weight: 900%;
+}
+
+#map {
+    height: 50vh;
+    width: 100%;
+}
+
+.gmaps-button {
+  display: inline-block;
+  margin-bottom: 1rem; /* beri jarak bawah */
+  background-color: #e3342f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: sans-serif;
+  position: relative; /* supaya tetap di alur dokumen */
+  transition: background-color 0.3s ease;
+}
+
+.gmaps-button:hover {
+  background-color: #c0261d;
 }
 
 /* Responsive ahay */
@@ -364,6 +326,7 @@ font-size: 1.2rem;
 
 ul {
 padding-left: 10px;
+font-size: 1.1rem
 }
 
 .swiper-wrap {

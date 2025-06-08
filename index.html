@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZEIN Alumunium</title>
+    <title>ZEIN Karya Alumunium</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="coba.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   </head>
   <body>
     <div class="fullscreen-container">
       <img
-        src="Photo/Photo 1.jpg"
+        src="Photo/1'2.jpg"
         class="fullscreen-img"
         alt="Foto fullscreen"
       />
       <div class="content-wrapper">
-        <h1 class="Judul">ZEIN Alumunium By Sinaga</h1>
-        <h2 class="logo">Logo</h2>
+        <h1 class="Judul">ZEIN Karya Alumunium</h1>
+        <!-- <h2 class="logo">Logo</h2> -->
       </div>
     </div>
 
@@ -67,68 +69,108 @@
       </div>
     </div>
     <div class="section">
-
-      <swiper-container
-        class="mySwiper"
-        navigation="true"
-        pagination="true"
-        keyboard="true"
-        mousewheel="true"
-        css-mode="true"
-      >
-        <swiper-slide>
-          <div class="swiper-group">
-            <img src="Photo/1.jpg" alt="" />
-            <div class="swiper-wrap">
-                <p>
-                 Aluminium
-                </p>
-            </div>
-          </div>
-          </swiper-slide
-        >
-        <swiper-slide>
-          <div class="swiper-group">
-            <img src="Photo/5.jpg" alt="" />
-            <div class="swiper-wrap">
-                <p>
-                 Aluminium
-                </p>
-            </div>
-          </div>
-          </swiper-slide
-        >
-        <swiper-slide>
-          <div class="swiper-group">
-            <img src="Photo/3.jpg" alt="" />
-            <div class="swiper-wrap">
-                <p>
-                 Aluminium
-                </p>
-            </div>
-          </div>
-          </swiper-slide
-        >
-        <swiper-slide>
-          <div class="swiper-group">
-            <img src="Photo/4.jpg" alt="" />
-            <div class="swiper-wrap">
-                <p>
-                 Aluminium
-                </p>
-            </div>
-          </div>
-          </swiper-slide
-        >
-
-        <div class="swiper-pagination"></div>
-      </swiper-container>
-
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-      <div class="project-info"></div>
+       <div class="container">
+    <div class="top-bar">
+      <h2>Gambar</h2>
+      <button type="button" disabled id="action-button-previous" class="action-button--horizontal-scroll">◀</button>
+      <button type="button" id="action-button-next" class="action-button--horizontal-scroll">▶</button>
     </div>
 
-      <a href="#" class="red-button">Lihat gambar yang lain</a>
+    <div id="events">
+      <a href="#the-weeknd" class="event">
+        <div class="event__image">
+          <img src="Photo/1.jpg" alt="The Weeknd" />
+        </div>
+        <div class="event-description">
+          <h2>Alumunium</h2>
+        </div>
+      </a>
+
+      <a href="#the-weeknd" class="event">
+        <div class="event__image">
+          <img src="Photo/2.jpg" alt="The Weeknd" />
+        </div>
+        <div class="event-description">
+          <h2>Alumunium</h2>
+        </div>
+      </a>
+
+      <a href="#the-weeknd" class="event">
+        <div class="event__image">
+          <img src="Photo/3.jpg" alt="The Weeknd" />
+        </div>
+        <div class="event-description">
+          <h2>Aluminium</h2>
+        </div>
+      </a>
+
+      <a href="#the-weeknd" class="event">
+        <div class="event__image">
+          <img src="Photo/5.jpg" alt="The Weeknd" />
+        </div>
+        <div class="event-description">
+          <h2>Alumunium</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const events = document.getElementById("events");
+
+    let isDown = false;
+    let startX, startY, scrollLeft, scrollTop;
+
+    events.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - events.offsetLeft;
+      startY = e.pageY - events.offsetTop;
+      scrollLeft = events.scrollLeft;
+      scrollTop = events.scrollTop;
+      events.style.cursor = "grabbing";
+    });
+
+    events.addEventListener("mouseleave", () => {
+      isDown = false;
+      events.style.cursor = "grab";
+    });
+
+    events.addEventListener("mouseup", () => {
+      isDown = false;
+      events.style.cursor = "grab";
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - events.offsetLeft;
+      const y = e.pageY - events.offsetTop;
+      const walkX = (x - startX) * 1;
+      const walkY = (y - startY) * 1;
+      events.scrollLeft = scrollLeft - walkX;
+      events.scrollTop = scrollTop - walkY;
+    });
+
+    const scrollLeftButton = document.getElementById("action-button-previous");
+    const scrollRightButton = document.getElementById("action-button-next");
+
+    scrollLeftButton.addEventListener("click", () => {
+      events.scrollBy({ top: 0, left: -200, behavior: "smooth" });
+    });
+
+    scrollRightButton.addEventListener("click", () => {
+      events.scrollBy({ top: 0, left: 200, behavior: "smooth" });
+    });
+
+    events.addEventListener("scroll", () => {
+      const position = events.scrollLeft;
+      scrollLeftButton.disabled = position === 0;
+      scrollRightButton.disabled = Math.round(position) === events.scrollWidth - events.clientWidth;
+    });
+  </script>
+    </div>
+
+      <a href="page2.html" class="red-button">Lihat gambar yang lain</a>
 
 
 
@@ -145,7 +187,7 @@
       <div class="line-small"></div>
       <div class="icon-text">
         <img src="https://img.icons8.com/ios-filled/24/000000/whatsapp.png"/>
-        <span>+08000000000</span>
+        <span>+62 812-9932-4932</span>
       </div>
       <div class="icon-text">
         <img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png"/>
@@ -153,17 +195,42 @@
       </div>
     </div>
 
-    <div class="location-info">
-      <h3>Locate</h3>
-      <div class="line-small"></div>
-      <div class="image-box">
-        <img src="your-image.jpg" alt="Map or Location"/>
-      </div>
-      <div class="icon-text">
-        <img src="https://img.icons8.com/ios-filled/24/000000/marker.png"/>
-        <span>Gunung putri bogor</span>
-      </div>
+<section class="location-info">
+  <h3>Lokasi</h3>
+  <div class="line-small"></div>
+
+  <!-- Tombol Google Maps -->
+  <a
+    href="https://maps.app.goo.gl/nXrGQWCU54srzVxbA" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="gmaps-button"
+  >
+    Lihat di Google Maps
+  </a>
+
+  <!-- Box berisi peta -->
+  <div class="image-box">
+    <div id="map">
+      <!-- Bisa disisipkan iframe Google Maps di sini -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3668967032125!2d106.92443247484976!3d-6.217213893767973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d557d861e9b%3A0x27e1e04b94f5d51b!2sGunung%20Putri%2C%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1717939200000!5m2!1sen!2sid" 
+        width="100%" 
+        height="250" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
+  </div>
+
+  <!-- Info alamat -->
+  <div class="icon-text">
+    <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Icon Lokasi" />
+    <span>Vila Mas Garden Blok C No. 2 RT 09/10, Kelurahan Perwira, Kecamatan Bekasi Utara, Kota Bekasi, Jawa Barat</span>
+  </div>
+</section>
   </div>
 </div>
 <div class="copyright">
@@ -173,19 +240,28 @@
 
 
 
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        cssMode: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        mousewheel: true,
-        keyboard: true,
-      });
-    </script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+const latitude = -6.210472;
+const longitude = 107.008389;
+
+// Inisialisasi peta Leaflet
+const map = L.map('map').setView([latitude, longitude], 16);
+
+// Layer OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Marker dengan popup
+L.marker([latitude, longitude]).addTo(map)
+  .bindPopup("Lokasi: -6.210472, 107.008389")
+  .openPopup();
+
+// Set link ke Google Maps
+const googleMapsURL = `https://www.google.com/maps?q=${latitude},${longitude}`;
+document.getElementById('googleMapsLink').href = googleMapsURL;
+  </script>
   </body>
 </html>
