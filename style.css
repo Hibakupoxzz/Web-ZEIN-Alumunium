@@ -45,17 +45,20 @@ color: white;
 }
 
 .grup-marquee {
-width: 142%;
-background: #e43030;
-padding: 5px 0;
-margin-right: 15;
-position: relative; /* Tetap di aliran dokumen normal */
+  width: 100%;
+  background: #e43030;
+  padding: 5px 0;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
 }
 
 marquee {
-color: white;
-font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
+  width: 100%;
 }
+
 
 p {
     font-size: 1.1rem;
