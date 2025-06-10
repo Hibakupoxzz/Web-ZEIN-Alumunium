@@ -2,11 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZEIN Karya Alumunium</title>
+    <meta name="description" content="Jasa Pemasangan dan Pembuatan Aluminium Berkualitas untuk Rumah dan Bangunan Anda. Hubungi Zein Karya Aluminium Sekarang.">
+    <meta name="keywords" content="jasa aluminium, pemasangan aluminium, zein karya aluminium, pintu aluminium, jendela aluminium">
+    <meta name="author" content="Zein Karya Aluminium">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="coba.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!--- meta tag-->
+      <!-- Open Graph -->
+      <meta property="og:title" content="Zein Karya Alumunium">
+      <meta property="og:description" content="Jasa Pemasangan Aluminium Berkualitas Solusi Modern untuk Bangunan Anda">
+      <meta property="og:image" content="https://adeli.my.id/assets/images/thumbnail.png">
+      <meta property="og:url" content="https://www.zeinkaryaalumunium.com/">
+      <meta property="og:type" content="website">
+      <meta name="google-site-verification" content="googleb1b4d4ba0b832e56.html">
   </head>
   <body>
     <div class="fullscreen-container">
@@ -22,7 +35,7 @@
     </div>
 
   <div class="grup-marquee">
-    <marquee direction="right">
+    <marquee direction="left">
       Jasa Pemasangan Aluminium Berkualitas Solusi Modern untuk Bangunan Anda
     </marquee>
   </div>
@@ -189,11 +202,11 @@
         <img src="https://img.icons8.com/ios-filled/24/000000/whatsapp.png"/>
         <span>+62 812-9932-4932</span>
       </div>
-      <div class="icon-text">
+      <!-- <div class="icon-text">
         <img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png"/>
         <span>@Lorem.Epsum</span>
       </div>
-    </div>
+    </div> -->
 
 <section class="location-info">
   <h3>Lokasi</h3>
@@ -213,15 +226,15 @@
   <div class="image-box">
     <div id="map">
       <!-- Bisa disisipkan iframe Google Maps di sini -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3668967032125!2d106.92443247484976!3d-6.217213893767973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d557d861e9b%3A0x27e1e04b94f5d51b!2sGunung%20Putri%2C%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1717939200000!5m2!1sen!2sid" 
-        width="100%" 
-        height="250" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2333481059836!2d106.9879201!3d-6.2311388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b2bbba8c121%3A0x1a16a77e9ab57486!2sVilla%20Mas%20Garden!5e0!3m2!1sid!2sid!4v1718016500000!5m2!1sid!2sid" 
+          width="100%" 
+          height="250" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
     </div>
   </div>
 
@@ -243,8 +256,8 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-const latitude = -6.210472;
-const longitude = 107.008389;
+const latitude = -6.2311388;
+const longitude = 106.9879201;
 
 // Inisialisasi peta Leaflet
 const map = L.map('map').setView([latitude, longitude], 16);
@@ -256,7 +269,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Marker dengan popup
 L.marker([latitude, longitude]).addTo(map)
-  .bindPopup("Lokasi: -6.210472, 107.008389")
+  .bindPopup("Lokasi: ZeinKaryaAlumunium")
   .openPopup();
 
 // Set link ke Google Maps
