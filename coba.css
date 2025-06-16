@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap");
 
 :root {
---accent: #e3342f;
---accent-hover: #e3342f;
---accent-active: #e3342f;
+--accent: #0d68af;
+--accent-hover: #0d68af;
+--accent-active: #0d68af;
 --accent-text: #000000;
 --secondary: #FCEFEF;
 --secondary-active: #E06D4E;
@@ -11,8 +11,8 @@
 --headline-color: rgba(29, 32, 59, 1);
 --white: #fff;
 --scrollbar-thumb: rgba(29, 32, 59, 0.1);
---error: #D33300;
---success: #e3342f;
+--error: #0d68af;
+--success: #0d68af;
 }
 section {
     font-family: Fustat;
@@ -28,10 +28,10 @@ section {
 }
 
 .top-bar h2 {
-    color: #e43030;
+    color: #0d68af;
     font-size: 23px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e43030;
+    border-bottom: 2px solid #0d68af;
     font-weight: 700;
     line-height: 1.5rem;
 }
